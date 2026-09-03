@@ -1,0 +1,170 @@
+/* ============================================================================
+   Paper Critters — "Arcade" theme  ·  shadcn-compatible CSS variables
+   ----------------------------------------------------------------------------
+   Drop-in theme tokens for a shadcn/ui project. Light values live on :root,
+   dark values on .dark (shadcn's default dark selector).
+
+   Tailwind v4 (shadcn latest): reference these from your @theme inline block, e.g.
+       @theme inline {
+         --color-background: var(--background);
+         --color-foreground: var(--foreground);
+         --color-primary: var(--primary);
+         --color-primary-foreground: var(--primary-foreground);
+         --color-accent: var(--accent);
+         --color-destructive: var(--destructive);
+         --color-border: var(--border);
+         --color-input: var(--input);
+         --color-ring: var(--ring);
+         --radius: var(--radius);
+         map the rest the same way
+       }
+   Tailwind v3 (classic shadcn): these use hex, not HSL channels. Either switch
+   your tailwind.config color fns to use the var directly (e.g. background:
+   "var(--background)") or convert the values to "H S% L%" triples.
+
+   NON-STANDARD EXTRAS (Paper Critters signatures, not part of stock shadcn):
+     --hero / --hero-foreground / --hero-shadow  → the lime "Hero" CTA
+     --primary-shadow                            → hard offset behind Primary
+     --secondary-border, --accent-soft, --accent-strong, --input-border,
+     --ring-soft, --switch-off, --card-shadow, --label, --border-width
+   ========================================================================== */
+
+:root {
+  /* radius & stroke */
+  --radius: 6px;
+  --border-width: 2px;
+
+  /* brand (fixed across modes) */
+  --brand-lime: #b0d135;
+  --brand-sky:  #28aae1;
+  --brand-ink:  #3d3d3e;
+  --brand-coral:#cd5c5c;
+
+  /* ---- LIGHT ---- */
+  --background: #f4f5f0;
+  --foreground: #2f2f34;
+  --card: #ffffff;
+  --card-foreground: #2f2f34;
+  --popover: #ffffff;
+  --popover-foreground: #2f2f34;
+
+  --primary: #3d3d3e;            /* Primary button = ink face … */
+  --primary-foreground: #ffffff;
+  --primary-shadow: #b0d135;     /* … with a hard lime offset shadow */
+
+  --hero: #b0d135;               /* Hero CTA = lime face … */
+  --hero-foreground: #26260c;
+  --hero-shadow: #3d3d3e;        /* … with a hard ink offset shadow */
+
+  --secondary: #ffffff;
+  --secondary-foreground: #3d3d3e;
+  --secondary-border: #3d3d3e;
+
+  --muted: #ecece7;
+  --muted-foreground: #79797f;
+
+  --accent: #b0d135;
+  --accent-foreground: #33330f;
+  --accent-soft: #eef4d9;        /* selected-row / soft fill */
+  --accent-strong: #5f7a06;      /* accent text that passes AA on light */
+
+  --destructive: #cd5c5c;
+  --destructive-foreground: #ffffff;
+  --destructive-soft: rgba(205, 92, 92, 0.16);
+
+  --success: #2e9e5b;            /* optional green for confirmations / notices */
+  --success-foreground: #ffffff;
+  --success-soft: #e4f3ea;
+  --success-strong: #1f7a44;
+
+  --border: #e3e3e0;
+  --input: #ffffff;              /* input background */
+  --input-border: #3d3d3e;       /* 2px ink border is the Arcade signature */
+  --ring: #b0d135;
+  --ring-soft: rgba(176, 209, 53, 0.40);
+
+  --switch-off: #cececa;
+  --card-shadow: 5px 5px 0 rgba(61, 61, 62, 0.12);
+  --label: #3d3d3e;
+
+  /* elevation — hard offset, re-tones per mode via --shadow-color */
+  --shadow-color: rgba(61, 61, 62, 0.16);
+  --shadow-sm: 3px 3px 0 var(--shadow-color);
+  --shadow-md: 5px 5px 0 var(--shadow-color);
+  --shadow-lg: 8px 8px 0 var(--shadow-color);
+
+  /* sticker preview backgrounds */
+  --thumb-a: #3d3d3e;
+  --thumb-b: #4a4a52;
+}
+
+.dark {
+  --background: #17171b;
+  --foreground: #f1f1f3;
+  --card: #24242a;
+  --card-foreground: #f1f1f3;
+  --popover: #24242a;
+  --popover-foreground: #e7e7ea;
+
+  --primary: #35353c;            /* raised dark face so the ink Primary reads */
+  --primary-foreground: #ffffff;
+  --primary-shadow: #b0d135;     /* lime offset still pops on dark */
+
+  --hero: #b0d135;
+  --hero-foreground: #23230a;
+  --hero-shadow: #7c7c86;        /* lighter gray offset for contrast on dark */
+
+  --secondary: #2b2b31;
+  --secondary-foreground: #ececef;
+  --secondary-border: #5c5c63;
+
+  --muted: #2b2b31;
+  --muted-foreground: #9a9aa1;
+
+  --accent: #b0d135;
+  --accent-foreground: #23230a;
+  --accent-soft: #33380f;
+  --accent-strong: #c3e05a;
+
+  --destructive: #cd5c5c;
+  --destructive-foreground: #ffffff;
+  --destructive-soft: rgba(205, 92, 92, 0.24);
+
+  --success: #3fb26f;
+  --success-foreground: #08130c;
+  --success-soft: #16311f;
+  --success-strong: #7fd6a1;
+
+  --border: #43434a;
+  --input: #1c1c20;
+  --input-border: #4d4d55;
+  --ring: #b0d135;
+  --ring-soft: rgba(176, 209, 53, 0.40);
+
+  --switch-off: #4a4a52;
+  --card-shadow: 5px 5px 0 rgba(0, 0, 0, 0.35);
+  --label: #b7b7bf;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* sticker preview backgrounds */
+  --thumb-a: #101014;
+  --thumb-b: #1c1c22;
+}
+
+/* ---- Type tokens (load the webfonts separately) ----
+   Header : "FattiPatti" (your file)         — h1/h2, hero moments
+   Display: "Space Grotesk" 600              — buttons, emphasis
+   Sans   : "IBM Plex Sans" 400/500/600      — body & UI
+   Mono   : "IBM Plex Mono" 500/600 caps     — labels, badges, code           */
+:root {
+  --font-header: "FattiPatti", "Space Grotesk", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html[lang="ja"] {
+  --font-header: "Kosugi Maru", system-ui, sans-serif;
+  --font-display: "Noto Sans JP", system-ui, sans-serif;
+  --font-sans: "Noto Sans JP", system-ui, sans-serif;
+}
