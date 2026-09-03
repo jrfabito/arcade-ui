@@ -6,7 +6,7 @@ export { useTheme, setTheme, toggleTheme } from './hooks/useTheme'
 export type { Theme } from './hooks/useTheme'
 export { useIsMobile } from './hooks/useIsMobile'
 
-// Primitives
+// Primitives (13)
 export { Button, buttonVariants } from './primitives/Button'
 export { Input } from './primitives/Input'
 export { Label } from './primitives/Label'
@@ -101,6 +101,9 @@ export type { ModalShellProps } from './components/ModalShell'
 export { DrawerShell } from './components/DrawerShell'
 export type { DrawerShellProps } from './components/DrawerShell'
 
+export { ConfirmModal } from './components/ConfirmModal'
+export type { ConfirmModalProps } from './components/ConfirmModal'
+
 export { MultiSelectCheckbox } from './components/MultiSelectCheckbox'
 export type { MultiSelectCheckboxProps, MultiSelectGroup } from './components/MultiSelectCheckbox'
 
@@ -109,5 +112,20 @@ export type { ColorPaletteProps } from './components/ColorPalette'
 
 export { FilterBarShell } from './components/FilterBarShell'
 export type { FilterBarShellProps, SortOption, FacetConfig } from './components/FilterBarShell'
+
+export { GlobalNav } from './components/GlobalNav'
+export type { GlobalNavProps } from './components/GlobalNav'
+
+export { Footer } from './components/Footer'
+export type { FooterProps, SocialLinkItem } from './components/Footer'
+
+export { LanguageSwitcher, DEFAULT_LANGUAGES } from './components/LanguageSwitcher'
+export type { LanguageSwitcherProps, LanguageOption } from './components/LanguageSwitcher'
+
+export { MobileMenu } from './components/MobileMenu'
+export type { MobileMenuProps } from './components/MobileMenu'
+
+export { AdminSidebar } from './components/AdminSidebar'
+export type { AdminSidebarProps, AdminSidebarItem, AdminSidebarSection } from './components/AdminSidebar'
 
 export { ArcadeMark } from './components/Brand'
