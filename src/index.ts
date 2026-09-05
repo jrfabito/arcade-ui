@@ -55,6 +55,35 @@ export {
   AccordionTrigger,
   AccordionContent,
 } from './primitives/Accordion'
+export {
+  Popover,
+  PopoverTrigger,
+  PopoverAnchor,
+  PopoverClose,
+  PopoverContent,
+} from './primitives/Popover'
+export {
+  Table,
+  TableRoot,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableRow,
+  TableHead,
+  TableCell,
+  TableCaption,
+} from './primitives/Table'
+export type {
+  TableProps,
+  ColumnType,
+  ColumnFilterItem,
+  TableRowSelection,
+  TableExpandableConfig,
+  TablePaginationConfig,
+  SorterResult,
+  SortOrder,
+  TableLocale,
+} from './primitives/Table'
 
 // Specialized & Composite Components
 export {
