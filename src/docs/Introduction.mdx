@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/blocks';
+import { HeroBanner } from './components/HeroBanner';
+import { DocSection } from './components/DocSection';
+import { AestheticPillars } from './components/AestheticPillars';
+import { InteractivePlayground } from './components/InteractivePlayground';
+import { QuickStartGuide } from './components/QuickStartGuide';
+import { TokenShowcase } from './components/TokenShowcase';
+import { CategoryIndex } from './components/CategoryIndex';
+
+<Meta title="Welcome/Introduction" />
+
+<HeroBanner />
+
+<DocSection
+  kicker="PHILOSOPHY"
+  title="Design Principles & Aesthetics"
+  description="The Arcade UI aesthetic is engineered specifically for Paper Critters. It fuses tactile papercraft toy geometry with high-contrast arcade game aesthetics."
+>
+  <AestheticPillars />
+</DocSection>
+
+<DocSection
+  kicker="SANDBOX"
+  title="Live Component Sandbox"
+  description="Experience the tactile feedback of Arcade UI components directly below. Try typing a custom critter name, flipping the holographic foil toggle, adjusting the print scale slider, and clicking buttons to test the active-press drop shadow collapse."
+>
+  <InteractivePlayground />
+</DocSection>
+
+<DocSection
+  kicker="ONBOARDING"
+  title="Quick Start for Developers"
+  description="Get up and running with arcade-ui in your React application within minutes."
+>
+  <QuickStartGuide />
+</DocSection>
+
+<DocSection
+  kicker="FOUNDATIONS"
+  title="Foundations & Design Tokens"
+  description="Every component is powered by a set of unified CSS custom properties and semantic tokens, ensuring seamless transitions between Light and Dark modes."
+>
+  <TokenShowcase />
+</DocSection>
+
+<DocSection
+  kicker="DIRECTORY"
+  title="Explore the Catalog"
+  description="Browse our complete library of atomic primitives, composite patterns, and the comprehensive roadmap."
+>
+  <CategoryIndex />
+</DocSection>

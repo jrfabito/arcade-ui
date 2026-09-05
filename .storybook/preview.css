@@ -7,3 +7,49 @@ body {
   background-color: var(--background);
   color: var(--foreground);
 }
+
+/* Storybook Docs Markdown Typography Defaults (0-specificity via :where so component utilities are never overridden) */
+:where(.sbdocs-content) > h1,
+:where(.sbdocs-content) h1:not([class*="font-"]) {
+  font-family: var(--font-header);
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+:where(.sbdocs-content) > h2,
+:where(.sbdocs-content) h2:not([class*="font-"]) {
+  font-family: var(--font-header);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+:where(.sbdocs-content) > h3,
+:where(.sbdocs-content) h3:not([class*="font-"]) {
+  font-family: var(--font-header);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+
+:where(.sbdocs-content) > p {
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.625;
+  color: var(--muted-foreground);
+}
+
+:where(.sbdocs-content) > hr {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  border: 0;
+  border-top: 2px solid var(--border);
+  opacity: 0.7;
+}
