@@ -13,6 +13,7 @@ High-contrast, chunky, **sharp corners** (6px), **2px borders**, **lime accent**
 - 🧩 **Complete Component Suite**: Buttons, Split Buttons, Inputs, Cards, Glass Panels, Dropdowns, Selects, Sliders, Checkboxes, Switches, Modals, Drawers, Tooltips, Toasts, Color Pickers, and more.
 - 📖 **Storybook 8 Catalog**: Interactive component playground with theme switching and accessibility checks.
 - 📦 **Dual ESM & CJS**: Full TypeScript `.d.ts` declarations and tree-shaking support.
+- 🗺️ **[Component Roadmap & Checklist](./ROADMAP.md)**: Ant Design parity comparison and prioritized component roadmap.
 
 ---
 
