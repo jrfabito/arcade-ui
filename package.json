@@ -16,9 +16,11 @@
     "./fonts.css": "./dist/tokens/fonts.css",
     "./tokens.json": "./dist/tokens/tokens.json"
   },
+  "license": "MIT",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "vite build && node scripts/copy-assets.mjs",
