@@ -34,7 +34,16 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Build Storybook
-        run: npm run build-storybook
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+        run: |
+          npm run build-storybook 2>&1 | tee /tmp/sb-build.log || {
+            echo "## ❌ Storybook Build Failed" >> $GITHUB_STEP_SUMMARY
+            echo '```txt' >> $GITHUB_STEP_SUMMARY
+            tail -n 120 /tmp/sb-build.log >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            exit 1
+          }
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
